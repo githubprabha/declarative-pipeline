@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('git SCM') {
             steps {
-                git branch: 'main', url: 'https://github.com/githubprabha/declarative-pipeline.git'
+                echo "This is code fetch stage"
             }
         }
         stage('Build') {
             steps {
-                bat "mvn install"
+                echo "This is a build stage"
             }
         }
         stage('Test') {
